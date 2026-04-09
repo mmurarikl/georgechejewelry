@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="George Che's gallery of custom pieces">
+        <meta name="author" content="Mequila Murarik">
+        <title>Work | George Che Jewelry</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="images/gcj-logo-white.svg" alt="George Che Jewelry logo" class="logo">
+            <h1>George Che</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contact.html">Inquiries</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="portfolio-intro">
+                <h2>Portfolio</h2>
+                <p>A selection of handcrafted fine jewelry, including custom pieces,
+                    stone setting, fabrication, and finished work.</p>
+            </section>
+
+            <section class="portfolio-gallery">
+                <div class="gallery-grid">
+
+                    <div class="gallery-item"
+                        data-title="Solitaire Ring"
+                        data-images="images/solitaire-ring-1.JPG, images/solitaire-ring-2.JPG, images/solitaire-ring-3.JPG, images/solitaire-ring-4.JPG, images/solitaire-ring-5.JPG">
+                        <img src="images/solitaire-ring-1.JPG" alt="Solitaire ring by George Che">
+                        <div class="gallery-overlay">
+                            <p>Platinum Solitaire Ring</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item"
+                        data-title="Alex Ring"
+                        data-images="images/alex-ring-1.jpg, images/alex-ring-2.jpg, images/alex-ring-3.jpg, images/alex-ring-4.jpg, images/alex-ring-5.jpg, images/alex-ring-6.jpg">
+                        <img src="images/alex-ring-1.jpg" alt="Alex ring by George Che">
+                        <div class="gallery-overlay">
+                            <p>Engagement Ring</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item"
+                        data-title="Gold Solitaire"
+                        data-images="images/gold-solitaire-1.jpg, images/gold-solitaire-2.jpg, images/gold-solitaire-3.jpg, images/gold-solitaire-4.jpg, images/gold-solitaire-5.jpg, images/gold-solitaire-6.jpg, images/gold-solitaire-7.jpg">
+                        <img src="images/gold-solitaire-1.jpg" alt="Gold solitaire ring by George Che">
+                        <div class="gallery-overlay">
+                            <p>Gold Solitaire Ring</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item"
+                        data-title="Spinel Ring"
+                        data-images="images/spinel-ring-1.jpg, images/spinel-ring-2.jpg, images/spinel-ring-3.jpg, images/spinel-ring-4.jpg, images/spinel-ring-5.jpg, images/spinel-ring-6.jpg, images/spinel-ring-7.jpg, images/spinel-ring-8.jpg, images/spinel-ring-9.jpg">
+                        <img src="images/spinel-ring-1.jpg" alt="Spinel ring by George Che">
+                        <div class="gallery-overlay">
+                            <p>Spinel Ring</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="closeLightbox" aria-label="Close gallery">&times;</button>
+            <button class="lightbox-prev" id="prevBtn" aria-label="Previous image">&lt;</button>
+
+            <div class="lightbox-content">
+                <img id="lightboxImage" src="" alt="">
+                <p id="lightboxTitle"></p>
+            </div>
+
+            <button class="lightbox-next" id="nextBtn" aria-label="Next image">&gt;</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 George Che Jewelry LLC.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

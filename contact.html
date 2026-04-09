@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Custom jewelry inquiries for George Che Jewelry">
+        <meta name="author" content="Mequila Murarik">
+        <title>Inquiries | George Che Jewelry</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="images/gcj-logo-white.svg" alt="George Che Jewelry logo" class="logo">
+            <h1>George Che</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contact.html">Inquiries</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="contact-intro">
+                <h2>Custom Jewelry Inquiries</h2>
+                <p>Please share details about your project, including the type of piece, your budget, and your timeline.</p>
+            </section>
+
+            <section class="contact-form-section">
+                <form action="#" method="post" class="inquiry-form" id="inquiryForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name">
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email">
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="piece-type">Piece Type *</label>
+                        <select id="piece-type" name="piece-type">
+                            <option value="">Select one</option>
+                            <option value="ring">Ring</option>
+                            <option value="necklace">Necklace</option>
+                            <option value="bracelet">Bracelet</option>
+                            <option value="earrings">Earrings</option>
+                            <option value="other">Other (Specify in comments)</option>
+                        </select>
+                        <small class="error-message"></small>
+                        <p class="field-note">If multiple, please leave a note.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget *</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select one</option>
+                            <option value="under-1000">Under $1,000</option>
+                            <option value="1000-2500">$1,000–$2,500</option>
+                            <option value="2500-5000">$2,500–$5,000</option>
+                            <option value="5000-10000">$5,000–$10,000</option>
+                            <option value="10000-plus">$10,000+</option>
+                        </select>
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline">Timeline *</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select one</option>
+                            <option value="asap">As soon as possible</option>
+                            <option value="1-2-months">1–2 months</option>
+                            <option value="3-4-months">3–4 months</option>
+                            <option value="flexible">Flexible</option>
+                            <option value="not-sure">Not sure yet</option>
+                        </select>
+                        <small class="error-message"></small>
+                        <p class="field-note">Please note rush orders may incur an additional fee.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Project Description *</label>
+                        <textarea id="description" name="description" rows="6" placeholder="Describe your project here"></textarea>
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Submit Form</button>
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="contact-process">
+                <h2>What Happens Next?</h2>
+                <ul>
+                    <li>Your inquiry will be reviewed.</li>
+                    <li>You will receive a follow-up by email.</li>
+                    <li>Project details, timeline, and next steps will be discussed.</li>
+                    <li>If the project is a good fit, the custom process will begin.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 George Che Jewelry LLC.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
