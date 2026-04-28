@@ -65,8 +65,14 @@ if (form) {
         }
 
         if (isValid) {
-            alert("Inquiry submitted successfully");
-            form.reset();
+            const successMessage = document.createElement("p");
+            successMessage.textContent = `Thank you ${name.value.trim()}, we will be in touch with you soon.`;
+            successMessage.style.color = "var(--gold)";
+            successMessage.style.textAlign = "center";
+            successMessage.style.marginTop = "1rem";
+
+            form.innerHTML = "";
+            form.appendChild(successMessage);
         }
     });
 }
