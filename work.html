@@ -12,7 +12,10 @@
         <header>
             <img src="images/gcj-logo-white.svg" alt="George Che Jewelry logo" class="logo">
             <h1>George Che</h1>
-            <nav>
+
+            <button id="menuToggle" class="menu-toggle">☰</button>
+
+            <nav id="navMenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -32,7 +35,9 @@
                 <div class="gallery-grid">
 
                     <div class="gallery-item"
-                        data-title="Solitaire Ring"
+                        data-title="Platinum Solitaire Ring"
+                        data-material="Platinum · Diamond"
+                        data-description="A classic solitaire executed with precision, emphasizing proportion, clarity, and enduring simplicity."
                         data-images="images/solitaire-ring-1.JPG, images/solitaire-ring-2.JPG, images/solitaire-ring-3.JPG, images/solitaire-ring-4.JPG, images/solitaire-ring-5.JPG">
                         <img src="images/solitaire-ring-1.JPG" alt="Solitaire ring by George Che">
                         <div class="gallery-overlay">
@@ -41,16 +46,20 @@
                     </div>
 
                     <div class="gallery-item"
-                        data-title="Alex Ring"
+                        data-title="Toi et Moi Alexanderite Ring"
+                        data-material="18k Yellow Gold · Alexandrite · D IF Diamonds"
+                        data-description="Reimagined Toi et Moi featuring vivid color-shifting alexandrites paired with precision-cut diamonds. Designed for rarity, presence, and uncompromising craftsmanship."
                         data-images="images/alex-ring-1.jpg, images/alex-ring-2.jpg, images/alex-ring-3.jpg, images/alex-ring-4.jpg, images/alex-ring-5.jpg, images/alex-ring-6.jpg">
-                        <img src="images/alex-ring-1.jpg" alt="Alex ring by George Che">
+                        <img src="images/alex-ring-1.jpg" alt="Custom ring by George Che">
                         <div class="gallery-overlay">
                             <p>Engagement Ring</p>
                         </div>
                     </div>
 
                     <div class="gallery-item"
-                        data-title="Gold Solitaire"
+                        data-title="18k Gold Solitaire Ring"
+                        data-material="18k Yellow Gold · 2ct Old European Cut Diamond"
+                        data-description="Hand-fabricated from in-house alloyed gold, shaped for strength and light. A refined solitaire defined by precision, balance, and structural elegance."
                         data-images="images/gold-solitaire-1.jpg, images/gold-solitaire-2.jpg, images/gold-solitaire-3.jpg, images/gold-solitaire-4.jpg, images/gold-solitaire-5.jpg, images/gold-solitaire-6.jpg, images/gold-solitaire-7.jpg">
                         <img src="images/gold-solitaire-1.jpg" alt="Gold solitaire ring by George Che">
                         <div class="gallery-overlay">
@@ -59,13 +68,27 @@
                     </div>
 
                     <div class="gallery-item"
-                        data-title="Spinel Ring"
+                        data-title="Phantom Spinel Ring"
+                        data-material="Platinum · Burmese Spinel · Half-Moon Diamonds"
+                        data-description="A hand-fabricated three-stone ring balancing shadow and light. Subtle tonal shifts and restrained brilliance create a quiet, controlled presence."
                         data-images="images/spinel-ring-1.jpg, images/spinel-ring-2.jpg, images/spinel-ring-3.jpg, images/spinel-ring-4.jpg, images/spinel-ring-5.jpg, images/spinel-ring-6.jpg, images/spinel-ring-7.jpg, images/spinel-ring-8.jpg, images/spinel-ring-9.jpg">
                         <img src="images/spinel-ring-1.jpg" alt="Spinel ring by George Che">
                         <div class="gallery-overlay">
                             <p>Spinel Ring</p>
                         </div>
                     </div>
+
+                    <div class="gallery-item"
+                        data-title="Amethyst Pear Pendant"
+                        data-material="Platinum · Amethyst · Pavé Diamonds"
+                        data-description="A 60+ ct pear-shaped amethyst set in a fluid platinum mount, accented with tapering pavé diamonds that follow the stone’s natural movement."
+                        data-images="images/pear-pendant-1.jpg, images/pear-pendant-2.jpg, images/pear-pendant-3.jpg, images/pear-pendant-4.jpg">
+                        <img src="images/pear-pendant-1.jpg" alt="Pear pendant by George Che">
+                        <div class="gallery-overlay">
+                            <p>Pear Pendant</p>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </main>
@@ -76,7 +99,11 @@
 
             <div class="lightbox-content">
                 <img id="lightboxImage" src="" alt="">
-                <p id="lightboxTitle"></p>
+                <div class="lightbox-details">
+                    <h3 id="lightboxTitle">Title</h3>
+                    <p id="lightboxMaterial"></p>
+                    <p id="lightboxDescription"></p>
+                </div>
             </div>
 
             <button class="lightbox-next" id="nextBtn" aria-label="Next image">&gt;</button>
