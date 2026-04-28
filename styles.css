@@ -79,6 +79,8 @@ header {
     grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 1rem 2rem;
+    position: relative;
+    z-index: 300;
 }
 .logo {
     width: 2.5rem;
@@ -99,13 +101,15 @@ header h1 {
 }
 nav {
     position: absolute;
-    top: 70px;
+    top: 100%;
+    left: 0;
     right: 0;
     background-color: var(--dark-gray);
     width: 100%;
     display: none;
     z-index: 200;
 }
+
 nav ul {
     display: flex;
     flex-direction: column;
@@ -113,10 +117,29 @@ nav ul {
     padding: 1rem 0;
     gap: 1rem;
 }
+
 nav a {
     font-size: 0.95rem;
     font-family: "Lato", Arial, sans-serif;
     color: var(--white);
+    position: relative;
+    transition: color 0.3s ease;
+}
+nav a:hover, nav a:focus {
+    color: var(--gold);
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+}
+nav a:hover::after, nav a:focus::after {
+    width: 100%;
 }
 nav.active {
     display: block;
@@ -133,6 +156,7 @@ nav.active {
     height: 100%;
     object-fit: cover;
 }
+
 .hero::after {
     content: "";
     position: absolute;
@@ -219,12 +243,18 @@ section {
 }
 h1, h2, h3 {
     font-family: "Prata", Georgia, serif;
-    font-weight: 400;
+    font-weight: bold;
     letter-spacing: 0.5px;
     line-height: 1.2;
 }
 p {
     color: var(--light-gray);
+}
+.portfolio-intro h2, .contact-intro h2 {
+    font-size: 1.75rem;
+}
+.portfolio-intro p, .contact-intro p {
+    font-size: 1.25rem;
 }
 .gallery-grid {
     display: grid;
