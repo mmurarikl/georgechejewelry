@@ -73,6 +73,10 @@ main, header, footer {
     width: 90%;
     margin: 0 auto;
 }
+main {
+    max-width: 1200px;
+
+}
 header {
     width: 100%;
     display: grid;
@@ -192,6 +196,10 @@ nav.active {
     padding: 8px;
     border-radius: 8px;
 }
+.hero-content a:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
 .about {
     background-color: var(--dark-gray);
     padding: 1.5rem 1rem 2rem;
@@ -214,6 +222,7 @@ nav.active {
 }
 .featured {
     text-align: center;
+    padding-top: 2rem;
 }
 .featured h2 {
     font-size: 1.75rem;
@@ -223,16 +232,21 @@ nav.active {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25rem;
+    max-width: 500px;
+    margin: 0 auto;
 }
 .featured-card {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
 }
 .featured-card img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    max-width: 280px;
+    margin: 0 auto;
 }
 footer {
     padding: 2rem 0;
@@ -345,6 +359,48 @@ button:hover, a.button:hover {
     background-color: var(--gold);
     color: var(--black);
 }
+.contact-intro, .contact-form-section, .contact-process {
+    max-width: 680px;
+    margin: 0 auto;
+}
+.contact-intro {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.contact-intro h2, .contact-process h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+.inquiry-form {
+    display: grid;
+    gap: 1.25rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+.field-note {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--gold);
+}
+.contact-process {
+    background-color: var(--dark-gray);
+    padding: 2rem 1.25rem;
+    margin-bottom: 2rem;
+}
+.contact-process ul {
+    display: grid;
+    gap: 0.85rem;
+}
+.contact-process li {
+    color: var(--light-gray);
+    padding-left: 1rem;
+    border-left: 1px solid var(--gold);
+}
 input, select, textarea {
     width: 100%;
     padding: 0.75rem 1rem;
@@ -363,6 +419,7 @@ textarea {
 }
 
 /* media queries */
+/* tablet */
 @media (min-width: 768px) {
     .menu-toggle {
         display: none;
@@ -396,19 +453,33 @@ textarea {
     .about-content h2 {
         font-size: 2rem;
     }
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 700px;
+    }
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
+    .contact-intro, .contact-form-section, .contact-process {
+        max-width: 620px;
+    }
 }
-
+/* desktop */
 @media (min-width: 1024px) {
     .about {
         gap: 3rem;
         padding: 2.5rem;
     }
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+    }
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2.5rem;
+    }
+    .contact-intro, .contact-form-section, .contact-process {
+        max-width: 720px;
     }
 }

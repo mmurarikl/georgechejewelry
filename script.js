@@ -6,7 +6,70 @@ if (menuToggle && navMenu) {
         navMenu.classList.toggle("active");
     });
 }
+const form = document.getElementById("inquiryForm");
 
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+
+        function setError(input, message) {
+            const group = input.parentElement;
+            const error = group.querySelector(".error-message");
+            error.textContent = message;
+            input.style.borderColor = "#ff6b6b";
+            isValid = false;
+        }
+
+        function clearError(input) {
+            const group = input.parentElement;
+            const error = group.querySelector(".error-message");
+            error.textContent = "";
+            input.style.borderColor = "var(--border-gray)";
+        }
+
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const pieceType = document.getElementById("piece-type");
+        const budget = document.getElementById("budget");
+        const timeline = document.getElementById("timeline");
+        const description = document.getElementById("description");
+
+        [name, email, pieceType, budget, timeline, description].forEach(clearError);
+
+        if (name.value.trim() === "") {
+            setError(name, "Name is required");
+        }
+
+        if (email.value.trim() === "") {
+            setError(email, "Email is required");
+        } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+            setError(email, "Enter a valid email");
+        }
+
+        if (pieceType.value === "") {
+            setError(pieceType, "Select a piece type");
+        }
+
+        if (budget.value === "") {
+            setError(budget, "Select a budget");
+        }
+
+        if (timeline.value === "") {
+            setError(timeline, "Select a timeline");
+        }
+
+        if (description.value.trim() === "") {
+            setError(description, "Please describe your project");
+        }
+
+        if (isValid) {
+            alert("Inquiry submitted successfully");
+            form.reset();
+        }
+    });
+}
 const galleryItems = document.querySelectorAll(".gallery-item");
 const lightbox = document.getElementById("lightbox");
 
@@ -76,3 +139,4 @@ lightbox.addEventListener("click", function (e) {
         lightbox.classList.remove("active");
     }
 });
+
